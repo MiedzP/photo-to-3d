@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{TITLE}}</title>
+<script type="module" src="https://unpkg.com/@google/model-viewer@3.4.0/dist/model-viewer.min.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; background: #16161c; color: #e8e8f0; font: 14px system-ui, sans-serif; }
+  model-viewer { width: 100%; height: 100%; --poster-color: transparent; }
+  h1 { position: absolute; top: 12px; left: 16px; margin: 0; font-size: 16px; font-weight: 600; }
+  p { position: absolute; bottom: 12px; left: 16px; margin: 0; color: #9a9ab0; }
+</style>
+</head>
+<body>
+<h1>{{TITLE}}</h1>
+<model-viewer
+  src="data:model/gltf-binary;base64,{{MODEL_B64}}"
+  camera-controls auto-rotate shadow-intensity="1" exposure="1" alt="{{TITLE}}"></model-viewer>
+<p>Drag to orbit · scroll to zoom</p>
+</body>
+</html>
